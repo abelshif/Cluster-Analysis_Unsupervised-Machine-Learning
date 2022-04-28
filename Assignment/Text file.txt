@@ -1,0 +1,81 @@
+Clustering is a method that makes analysis on attributes of the dataset.
+A more suitable dataset for clustering is classification dataset.
+
+           K-means clustering methods:-
+K-means is an iterative clustering algorithm where the dataset is 
+classified on the basis of pre-determined cluster value.
+
+In K-means, the choosen cluster value depends on obtaining minimum variance
+between centroids and datapoints with in the cluster i.e, less variance 
+refers a more homoginoius cluster but every datapoints belongs a cluster 
+even though variance is high.
+
+An appropriate metrices for K-means are elbow and silhouette score.
+       
+        The elbow metohd for determining cluster for K-means:-
+        
+Calculate the Within-Cluster-Sum of Squared Errors (WSS) for different 
+values of K.
+
+Choose the K where WSS starts to decline first which is visible as 
+an elbow in the plot of WSS-versus-K.
+
+       The Silhouette score for determining cluster for K-means:-
+
+The silhouette value measures how similar a point is to its own cluster 
+compared to other clusters. 
+
+Silhouette score(s) = 𝑏−𝑎/max(𝑎,𝑏), where
+a = average distance between a data point and all others data points 
+    in the same cluster
+b = average distance between a data point and all other data points 
+    in the next nearest cluster
+
+Silhouette score value is between -1 and 1
+
+-1 means incorrect clustering
+
+0 means overlapping clusters
+
+1 means dense clustering (Clusters far apart are good)
+
+A silhouette score with high value is prefered to other values where
+the optimal(best) kluster corresponds to
+
+          DBSCAN clustering method:-
+         
+Is a clustering algorithm that considers two hyperparameters namely:
+        1. epsilon(eps)
+        2. min_sample 
+The value of epsilon determines the number of clusters in such a way that 
+if distance between many datapoints exceed the value of the epsilon, there 
+is a chance of many cluster formation and parallely there could be more 
+noices(datapoints found far from thier density families).
+N.B Low epsilon value is recommended, while default value is 0.5
+
+Min_sample means the suitable number of samples used for cluster formation.
+N.B If the original dataset has many noices it is recommended to increase 
+the value of min_sample.
+
+An appropriate metrices for DBSCAN are silhouette score and Davies-Bouldin
+score.
+
+Davies-Bouldin score= Sum(Rij) for i!=j   where:
+
+   Rij = (Si + Sj)/dij   is within-to-between cluster distance ratio” för 
+                         i och j kluster
+   Si=average distance between datapoints and the centroid within cluster i.
+   Sj=average distance between datapoints and the centroid Within cluster j.
+   dij=Euclidean distance between centroids of the two clusters.
+
+N.B Davies-Bouldin score with low value is prefered for optimal cluster.
+
+
+
+
+
+
+
+
+
+ 
