@@ -1,2 +1,2 @@
 # Visual-data-analysis-assignment
-# Grade: VG
+Grade: VG
