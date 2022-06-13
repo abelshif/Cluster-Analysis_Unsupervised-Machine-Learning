@@ -1,2 +1,1 @@
-# Visual data analysis assignment
-# Grade: VG
+# Visual data analysis
